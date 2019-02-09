@@ -1,3 +1,4 @@
+// for pushing to heroku and able to use the port
 require("dotenv").config();
 var express = require("express");
 var exphbs = require("express-handlebars");
@@ -25,6 +26,7 @@ app.set("view engine", "handlebars");
 require("./routes/apiRoutes")(app);
 require("./routes/htmlRoutes")(app);
 
+// doens't force quit and clear database every time the app is run
 var syncOptions = { force: false };
 
 // If running a test, set syncOptions.force to true
@@ -44,4 +46,5 @@ db.sequelize.sync(syncOptions).then(function() {
   });
 });
 
+// exporing it just to run tests, never going to require it other than your test files
 module.exports = app;

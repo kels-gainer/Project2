@@ -18,3 +18,6 @@ function hide_sidebar() {
   menu.classList.remove("open");
 }
 // navbar end
+
+
+// grid
