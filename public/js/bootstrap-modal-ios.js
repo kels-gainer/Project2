@@ -1,3 +1,4 @@
+// Added by Jesse Howard for the Auth Modal
 var BootstrapModaliOS = (function(){
 
 	var disableBodyScroll = (function () { // 🔗 Thijs Huijssoon https://gist.github.com/thuijssoon

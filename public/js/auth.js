@@ -1,5 +1,7 @@
- //******** Initialize Firebase
- var config = {
+// Added by Jesse Howard for the Auth Modal
+
+//******** Initialize Firebase
+var config = {
   apiKey: "AIzaSyDs-d89LsvmB0Tu4ShIFJsqQfgCquQixCU",
   authDomain: "mymemeauth.firebaseapp.com",
   databaseURL: "https://mymemeauth.firebaseio.com",
@@ -9,32 +11,23 @@
 };
 firebase.initializeApp(config);
 
-
-
 //******** FirebaseUI
 //To start the FirebaseUI sigin in, initialize the FirebaseUI instance
 var ui = new firebaseui.auth.AuthUI(firebase.auth());
 
-
 ui.start("#firebaseui-auth-container", {
-    signInOptions: [
-      firebase.auth.EmailAuthProvider.PROVIDER_ID
-    ],
-    // Other config options...
-    
-  });
-
+  signInOptions: [firebase.auth.EmailAuthProvider.PROVIDER_ID]
+  // Other config options...
+});
 
 // ******** Global Variables
 var UID = "";
- 
 
 //******** Form functions:
-  /**
-     * Handles the sign in button press.
-     */
-    function toggleSignIn() {
-      if (firebase.auth().currentUser) {
+/*** Handles the sign in button press.
+ */
+function toggleSignIn() {
+  if (firebase.auth().currentUser) {
         // [START signout]
         firebase.auth().signOut();
         // [END signout]
