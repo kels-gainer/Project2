@@ -79,3 +79,7 @@
   #user-status {
     margin-left: 0.5rem;
   }
+
+  .modal-content {
+    color: black;
+  }

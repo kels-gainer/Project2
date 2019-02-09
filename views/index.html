@@ -5,10 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.0.0/lumen/bootstrap.min.css" />
-    <link rel="stylesheet" href="../public/styles/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<script src="https://code.jquery.com/jquery.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="styles/auth.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -27,6 +30,7 @@
             <nav>
               <ul>
                 <li><a href="#">Home</a></li>
+                <li><a data-toggle="modal" data-target="#authModal">Account</a></li>
                 <li><a href="#">My Memes</a></li>
                 <li><a href="#">Create Meme</a></li>
                 <li><a href="#">Meme Wars</a></li>
@@ -35,8 +39,45 @@
             </nav>
           </div>
 
-          
+<!-- AUTH MODAL -->
+<div class="modal fade" id="authModal" role="dialog">
+  <div class="modal-dialog modal-dialog-centered">
 
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title"><i class="fas fa-user-circle"></i> <span id="quickstart-sign-in-status">Unknown</span></h4>
+      </div>
+      <div class="modal-body">
+        <h5>Welcome</h5>
+        <span id="welcome-account">
+          <p>Enter an email and password below and either sign in to an existing account or sign up</p>
+        </span>
+        <!-- Input fields go here -->
+        <input class="mdl-textfield__input" type="text" id="email" name="email" placeholder="Email" />
+        <br>
+        <input class="mdl-textfield__input" type="password" id="password" name="password" placeholder="Password" />
+        <br /><br />
+        <button class="mdl-button mdl-js-button mdl-button--raised" id="quickstart-sign-in" name="signin">Sign In</button>
+        &nbsp;&nbsp;&nbsp;
+        <button class="mdl-button mdl-js-button mdl-button--raised" id="quickstart-sign-up" name="signup">Sign Up</button>
+        <br><br>
+        <button class="mdl-button mdl-js-button mdl-button--raised" disabled id="quickstart-verify-email" name="verify-email">Send
+          Email Verification</button>
+        &nbsp;&nbsp;&nbsp;
+        <button class="mdl-button mdl-js-button mdl-button--raised" id="quickstart-password-reset" name="verify-email">Send
+          Password Reset Email</button>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+          
+<!-- MAIN CONTENT -->
           <div class="container">
               <div class="row">
                   <div class="col-md wrap">
@@ -61,6 +102,10 @@
               
           </div>
 
-<script type="text/javascript" src="../public/js/index.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
+<script src="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.js"></script>
+<link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.css" />
+<script type="text/javascript" src="js/auth.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
 </body>
 </html>
