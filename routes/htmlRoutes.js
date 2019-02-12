@@ -1,21 +1,23 @@
-var path = require("path");
-//var db = require("../models");
+var db = require("../models");
 
 module.exports = function(app) {
   // Load index page
   app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "../views/index.html"));
+    db.Meme.findAll({}).then(function(dbMemes) {
+      res.render("index", { dbMemes: dbMemes });
+    });
   });
 
-  // Load example page and pass in an example by id
-  app.get("/example/:id", function(req, res) {
-    db.Example.findOne({ where: { id: req.params.id } }).then(function(
-      dbExample
-    ) {
-      res.render("example", {
-        example: dbExample
-      });
+  //post request to our db so get request below does something.
+  app.get("/myMemes", function(req, res) {
+    db.Meme.findAll({}).then(function(dbMemes) {
+      console.log(dbMemes);
+      res.render("myMemes", { dbMemes: dbMemes, test: "Test" });
     });
+  });
+
+  app.get("/createMemes", function(req, res) {
+    res.render("createMemes", { test: "Test" });
   });
 
   // Render 404 page for any unmatched routes
