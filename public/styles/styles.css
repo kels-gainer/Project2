@@ -237,7 +237,7 @@ html{
   .catergory-btn {
     margin: 25px;
   }
-
+  /* Kenneth's stuff. This was created for the Meme rendering */
   .memes-view {
     position: relative;
     top: 42.5%;
@@ -249,3 +249,4 @@ html{
     padding: 5px;
     float: left;    
   }
+  /* End Kenneth's stuff */
