@@ -237,3 +237,15 @@ html{
   .catergory-btn {
     margin: 25px;
   }
+
+  .memes-view {
+    position: relative;
+    top: 42.5%;
+    
+  }
+  .meme {
+    width: 150px;
+    height: 150px;
+    padding: 5px;
+    float: left;    
+  }
