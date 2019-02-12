@@ -52,14 +52,13 @@ html{
     }
   }
   /*gradient end */
-  
+
+  /* navbar start */
   .wrapper{
     overflow: hidden;
     position: relative;
     height: 100%;
   }
-  
-  /* navbar start */
   
   header{
     background:black;
