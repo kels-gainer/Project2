@@ -9,25 +9,21 @@ module.exports = function(sequelize, DataTypes) {
           len: [1, 60]
         }
       },
-      name: {
+      displayName: {
         type: DataTypes.STRING,
         allowNull: false,
         validate: {
           len: [1, 40]
         }
       },
-      favorite: {
-        type: DataTypes.BOOLEAN,
-        defaultValue: false
-      },
-      category: {
+      instanceImageUrl: {
         type: DataTypes.STRING,
         allowNull: false,
         validate: {
-          len: [1, 40]
+          len: [1, 80]
         }
       },
-      url: {
+      imageUrl: {
         type: DataTypes.STRING,
         allowNull: false,
         validate: {

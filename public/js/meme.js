@@ -1,6 +1,6 @@
 $(document).ready(function() {
   //Popular Button
-  console.log("Loaded");
+  // console.log("Loaded");
   $(document).on("click", "#btnPop", function() {
     $.ajax({
       url: "/api/btnPop",
