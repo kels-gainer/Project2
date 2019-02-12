@@ -7,6 +7,7 @@ module.exports = function(app) {
       res.render("index", { dbMemes: dbMemes });
     });
   });
+
   //post request to our db so get request below does something.
   app.get("/myMemes", function(req, res) {
     db.Meme.findAll({}).then(function(dbMemes) {
