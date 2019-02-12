@@ -1,15 +1,15 @@
 {
   "development": {
     "username": "root",
-    "password": "#Bowling1",
+    "password": "",
     "port": 3306,
-    "database": "project2",
+    "database": "",
     "host": "localhost",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
-    "password": "mysql4boba1",
+    "password": "root",
     "database": "testdb",
     "host": "localhost",
     "dialect": "mysql",

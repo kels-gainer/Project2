@@ -4,7 +4,7 @@ var db = require("../models");
 var axios = require("axios");
 var MemeKey = require("../public/js/keys.js");
 module.exports = function(app) {
-  // Get all examples
+  // Using btnPop to get API request from Memegenerator
   app.get("/api/btnPop", function(req, res) {
     var n = Math.floor(Math.random() * 20) + 1;
     var queryURL =
