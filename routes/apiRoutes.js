@@ -35,6 +35,18 @@ module.exports = function(app) {
     // });
   });
 
+  //GET request to find all options for current user
+  app.get("/api/:uID", function(req, res) {
+    // Find All Memes with the uID that match the passed req.params.id and return them as res.json
+    db.Meme.findAll({
+      where: {
+        uID: req.params.uID
+      }
+    }).then(function(dbMeme) {
+      res.json(dbMeme);
+    });
+  });
+
   // Create a new example
   app.post("/api/examples", function(req, res) {
     db.Example.create(req.body).then(function(dbExample) {
