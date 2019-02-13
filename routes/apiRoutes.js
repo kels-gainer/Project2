@@ -13,7 +13,7 @@ module.exports = function(app) {
       "&days=&apiKey=" +
       MemeKey.apiKey;
     axios.get(queryURL).then(function(response) {
-      console.log(response.data.result);
+      //console.log(response.data.result);
       res.send(response.data.result);
     });
     // .catch(function(error) {
@@ -44,13 +44,15 @@ module.exports = function(app) {
       }
     }).then(function(dbMeme) {
       res.json(dbMeme);
+      //displayMemes(dbMeme);
     });
   });
 
-  // Create a new example
-  app.post("/api/examples", function(req, res) {
-    db.Example.create(req.body).then(function(dbExample) {
-      res.json(dbExample);
+  // POST route for saving a new post
+  app.post("/api/posts", function(req, res) {
+    console.log(req.body);
+    db.Meme.create(req.body).then(function(dbMeme) {
+      res.json(dbMeme);
     });
   });
 
