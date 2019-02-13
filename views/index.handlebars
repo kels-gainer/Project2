@@ -14,9 +14,10 @@
   <nav>
     <ul>
       <li><a href="#">Home</a></li>
-      <li><a data-toggle="modal" data-target="#authModal">Account</a></li>
-      <li><a href="" id="myMemes">My Memes</a></li>
-      <li><a href="/createMemes">Create Meme</a></li>
+      <li><a href="#" data-toggle="modal" data-target="#authModal">Account</a></li>
+      {{!-- Updated these buttons to default to the auth modal if not logged in --}}
+      <li><a href="#" data-toggle="modal" data-target="#authModal" id="myMemes">My Memes</a></li>
+      <li><a href="#" data-toggle="modal" data-target="#authModal" id="createMeme">Create Meme</a></li>
       <li><a href="#">Meme Wars</a></li>
       <li><a href="#">Sign Out</a></li>
     </ul>
@@ -85,7 +86,7 @@
     <button type="button" id="btnRan" class="btn btn-secondary btn-lg catergory-btn">RANDOM</button>
   </div>
     
-  <div class= "row">
+  <div class= "row memes-view">
     
   </div>
 

@@ -13,7 +13,7 @@ module.exports = function(app) {
       "&days=&apiKey=" +
       MemeKey.apiKey;
     axios.get(queryURL).then(function(response) {
-      // console.log(response.data.result);
+      console.log(response.data.result);
       res.send(response.data.result);
     });
     // .catch(function(error) {

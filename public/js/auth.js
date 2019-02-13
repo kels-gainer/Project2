@@ -252,10 +252,13 @@ function setWelcomeText(userStatus) {
 
 function setuIDtoButton(uID) {
   //check to see if signed in
-  if (uID === "Undefined") {
-    console.log("FireBase uID is undefined");
+  if (uID !== "Undefined") {
+    $("#myMemes")
+      .attr({ href: "api/" + uID })
+      .removeAttr("data-toggle")
+      .removeAttr("data-target");
   } else {
-    $("#myMemes").attr({ href: "api/" + uID });
+    console.log("FireBase uID is undefined");
   }
 }
 
