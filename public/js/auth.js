@@ -254,7 +254,7 @@ function setuIDtoButton(uID) {
   //check to see if signed in
   if (uID !== "Undefined") {
     $("#myMemes")
-      .attr({ href: "api/" + uID })
+      .attr({ href: "myMemes/" + uID })
       .removeAttr("data-toggle")
       .removeAttr("data-target");
   } else {
