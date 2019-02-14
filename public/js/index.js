@@ -29,3 +29,21 @@ $(function() {
     })
 });
 
+// img modal
+
+var modal = document.getElementById("myModal")
+
+var img = document.getElementById("myImg");
+var modalImg = document.getElementById("test1");
+var captionText = document.getElementById("caption");
+img.onclick = function() {
+  modal.style.display = "block";
+  modalIMag.src = this.src;
+  captionText.innerHTML = this.lastChild;
+}
+
+var span = document.getElementByIdByClassName("close")[0];
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
