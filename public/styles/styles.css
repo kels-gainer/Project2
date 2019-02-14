@@ -236,6 +236,24 @@ html{
   .catergory-btn {
     margin: 25px;
   }
+<<<<<<< HEAD
+  /* Kenneth's stuff. This was created for the Meme rendering */
+=======
 
-  /*masonry*/
-  
+
+>>>>>>> 075e980838dfa221c343b0a678b66d620fd601d1
+  .memes-view {
+    position: relative;
+    top: 42.5%;
+    
+  }
+  .meme {
+    width: 150px;
+    height: 150px;
+    padding: 5px;
+    float: left;    
+  }
+<<<<<<< HEAD
+  /* End Kenneth's stuff */
+=======
+>>>>>>> 075e980838dfa221c343b0a678b66d620fd601d1

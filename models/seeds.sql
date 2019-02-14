@@ -1,8 +1,8 @@
-INSERT INTO memes (name, favorite, category, url)
-VALUES ("Sometimes one simply Does", false, "Walk into Mordor, Ned Stark", "http://smo.sh/2kLeBRK"),
-("Manatee Sith Lord", false, "Walk into Mordor, Manatee", "http://bit.ly/2lBWv64"),
-("Hobbit Hot", false, "Walk into Mordor, Look good to feel good", "http://bit.ly/2lHvomk"),
-("Sound of Silence", false, "Grumpy Cat", "http://bit.ly/2kjXKXl"),
-("My Office", false, "Like a Boss, Spiderman, Superhero", "http://bit.ly/2kEisgZ"),
-("Project Success", false, "Programmer", "http://bit.ly/24trKeU"),
-("Cloned Emotions", false, "Star Wars, Stormtrooper", "http://bit.ly/2kjMt9L");
+--Use your database name below if not the same
+USE project2;
+
+INSERT INTO memes (uID, name, favorite, category, url)
+VALUES ("000001", "you-didnt-finish-your-issues", false, "evil-monkey-family-guy", "https://memegenerator.net/img/instances/200x200/84066753/you-didnt-finish-your-issues.jpg"),
+("000001", "when you wanted to build a meme generator", false, "Stressed out guy ", "https://memegenerator.net/img/instances/200x200/84090533/when-you-wanted-to-build-a-meme-generator-and-then-started-to-work-on-backend-code.jpg"),
+("000001", "api-call-success-false", false, "Contemptuous Coder Cat", "http://memegenerator.net/img/instances/200x200/84079030/contemptuous-coder-cat-makes-api-call-success-false.jpg"),
+("000001", "one does not simply make an original app", false, "one does not simply", "https://memegenerator.net/img/instances/200x200/84093705/one-does-not-simply-make-an-original-app.jpg");
