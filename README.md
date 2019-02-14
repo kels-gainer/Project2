@@ -22,9 +22,8 @@ The purpose of this web app is to allow users to easily search for (and possibly
 
 ### Technology Used:
 
-  * [Auth0](https://auth0.com/docs/quickstart/webapp) - for user authentication
+  * [FireBase](https://firebase.google.com/docs/guides/?authuser=0) - for user account creation and authentication
   * [MemeGenerator API](http://version1.api.memegenerator.net/#JavaScript)
-  * [imgur API](https://apidocs.imgur.com/)
   * [node.js](https://nodejs.org/en/) - for Javascript based server code and logic
   * [express](https://expressjs.com/) - companion Web Framework for node.js
   * [mysql](https://www.npmjs.com/package/mysql) - for the ability for node to directly recieve and send data to a MySQL database.

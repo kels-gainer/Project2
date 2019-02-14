@@ -1,4 +1,5 @@
-{{!-- <div id="home">
+
+<div id="home">
   <div class="container">
     <div class="row">
       <div class="col-8 offset-2">
@@ -24,10 +25,97 @@
           </li>
           {{/each}}
         </ul>
+
+<!-- nav bar -->
+<div class="wrapper">
+  <header>
+    <svg viewBox="0 0 800 600" class="">
+      <path d="M300,220 C300,220 520,220 540,220 C740,220 640,540 520,420 C440,340 300,200 300,200" class="top_bar" />
+
+      <path d="M300,320 L540,320" class="middle_bar" />
+
+      <path d="M300,210 C300,210 520,210 540,210 C740,210 640,530 520,410 C440,330 300,190 300,190" class="bottom_bar"
+        transform="translate(480, 320) scale(1, -1) translate(-480, -318)" />
+    </svg>
+    <a href="#" class="logo">MyMeme</a>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a data-toggle="modal" data-target="#authModal">Account</a></li>
+      <li><a href="/myMemes">My Memes</a></li>
+      <li><a href="/createMemes">Create Meme</a></li>
+      <li><a href="#">Meme Wars</a></li>
+      <li><a href="#">Sign Out</a></li>
+    </ul>
+  </nav>
+  <div class= "container memes-view"></div>
+</div>
+
+<!-- AUTH MODAL -->
+<div class="modal fade" id="authModal" role="dialog">
+  <div class="modal-dialog modal-dialog-centered">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title"><i class="fas fa-user-circle"></i> <span id="quickstart-sign-in-status">Unknown</span>
+        </h4>
+      </div>
+      <div class="modal-body">
+        <h5>Welcome</h5>
+        <span id="welcome-account">
+          <p>Enter an email and password below and either sign in to an existing account or sign up</p>
+        </span>
+        <!-- Input fields go here -->
+        <input class="mdl-textfield__input" type="text" id="email" name="email" placeholder="Email" />
+        <br>
+        <input class="mdl-textfield__input" type="password" id="password" name="password" placeholder="Password" />
+        <br /><br />
+        <button class="mdl-button mdl-js-button mdl-button--raised" id="quickstart-sign-in" name="signin">Sign
+          In</button>
+        &nbsp;&nbsp;&nbsp;
+        <button class="mdl-button mdl-js-button mdl-button--raised" id="quickstart-sign-up" name="signup">Sign
+          Up</button>
+        <br><br>
+        <button class="mdl-button mdl-js-button mdl-button--raised" disabled id="quickstart-verify-email"
+          name="verify-email">Send
+          Email Verification</button>
+        &nbsp;&nbsp;&nbsp;
+        <button class="mdl-button mdl-js-button mdl-button--raised" id="quickstart-password-reset"
+          name="verify-email">Send
+          Password Reset Email</button>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
       </div>
     </div>
+
   </div>
-</div> --}}
+</div>
+
+
+<!-- MAIN CONTENT -->
+<div class="container">
+  <div class="row">
+    <div class="col-md wrap">
+      <div class="search">
+        <input type="text" class="searchTerm" placeholder="SEARCH A MEME">
+        <button type="submit" class="searchButton">
+          <i class="fa fa-search search-icon"></i>
+        </button>
+
+      </div>
+    </div>
+  </div class="row">
+  <div class="col-md btn-wrap">
+    <button type="button" id="btnPop" class="btn btn-secondary btn-lg catergory-btn">POPULAR</button>
+    <button type="button" id="btnRec" class="btn btn-secondary btn-lg catergory-btn">RECENT</button>
+    <button type="button" id="btnRan" class="btn btn-secondary btn-lg catergory-btn">RANDOM</button>
+  </div>
+
+//end div HOME
+</div>
 
 <!-- nav bar -->
     <div class="wrapper">
@@ -81,6 +169,11 @@
         <div class="button"><a href="#"> BUTTON </a></div>
       </div>
   </div>
+    
+  <div class= "row">
+    
+  </div>
 
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="/js/index.js"></script>
+</div>
+
+</div>
