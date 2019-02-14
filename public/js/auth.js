@@ -171,6 +171,8 @@ function initApp() {
       // User is signed in.
       UID = user.uid;
       console.log(UID);
+      //need to assign uID to button if already logged in
+      setuIDtoButton(UID);
       // var displayName = user.displayName;
       // var email = user.email;
       var emailVerified = user.emailVerified;
@@ -245,6 +247,18 @@ function setWelcomeText(userStatus) {
     welcomeHTML =
       "<p>Enter an email and password below and either sign in to an existing account or sign up</p>";
     $("#welcome-account").html(welcomeHTML);
+  }
+}
+
+function setuIDtoButton(uID) {
+  //check to see if signed in
+  if (uID !== "Undefined") {
+    $("#myMemes")
+      .attr({ href: "myMemes/" + uID })
+      .removeAttr("data-toggle")
+      .removeAttr("data-target");
+  } else {
+    console.log("FireBase uID is undefined");
   }
 }
 

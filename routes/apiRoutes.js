@@ -13,7 +13,7 @@ module.exports = function(app) {
       "&days=&apiKey=" +
       MemeKey.apiKey;
     axios.get(queryURL).then(function(response) {
-      // console.log(response.data.result);
+      //console.log(response.data.result);
       res.send(response.data.result);
     });
     // .catch(function(error) {
@@ -35,10 +35,24 @@ module.exports = function(app) {
     // });
   });
 
-  // Create a new example
-  app.post("/api/examples", function(req, res) {
-    db.Example.create(req.body).then(function(dbExample) {
-      res.json(dbExample);
+  // //GET request to find all options for current user
+  // app.get("/api/:uID", function(req, res) {
+  //   // Find All Memes with the uID that match the passed req.params.id and return them as res.json
+  //   db.Meme.findAll({
+  //     where: {
+  //       uID: req.params.uID
+  //     }
+  //   }).then(function(dbMeme) {
+  //     res.json(dbMeme);
+  //     //displayMemes(dbMeme);
+  //   });
+  // });
+
+  // POST route for saving a new post
+  app.post("/api/posts", function(req, res) {
+    console.log(req.body);
+    db.Meme.create(req.body).then(function(dbMeme) {
+      res.json(dbMeme);
     });
   });
 

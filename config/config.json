@@ -1,9 +1,9 @@
 {
   "development": {
     "username": "root",
-    "password": "",
+    "password": "mysql4boba1",
     "port": 3306,
-    "database": "",
+    "database": "myMeme",
     "host": "localhost",
     "dialect": "mysql"
   },

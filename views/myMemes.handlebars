@@ -1,2 +1,12 @@
-{{#each dbMemes}}<h1>{{name}}</h1>{{/each}}
-{{test}}
+
+  <div class= "container memes-view"></div>
+    {{#each dbMemes}}
+    <div class="col-md">
+        <div>
+            <img class="meme" src="{{instanceImageUrl}}" title="{{displayName}}">
+        </div>
+    </div>
+    {{/each}}
+  </div>
+
+</div>
