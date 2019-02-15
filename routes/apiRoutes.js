@@ -57,13 +57,14 @@ module.exports = function(app) {
   });
 
   // Delete an example by id
-  app.delete("/api/examples/:id", function(req, res) {
-    db.Example.destroy({
+  app.delete("/api/delete/:id", function(req, res) {
+    db.Meme.destroy({
       where: {
         id: req.params.id
       }
     }).then(function(dbExample) {
       res.json(dbExample);
+      //now to refresh the page
     });
   });
 };

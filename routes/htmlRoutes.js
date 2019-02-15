@@ -30,6 +30,17 @@ module.exports = function(app) {
     });
   });
 
+  // Delete an example by uid and instanceImageUrl
+  // app.delete("myMemes/:uid", function(req, res) {
+  //   db.Meme.destroy({
+  //     where: {
+  //       id: req.params.uid
+  //     }
+  //   }).then(function(dbExample) {
+  //     res.render("myMemes"), {dbMemes: dbExample};
+  //   });
+  // });
+
   app.get("/createMemes", function(req, res) {
     res.render("createMemes", { test: "Test" });
   });
@@ -39,3 +50,4 @@ module.exports = function(app) {
     res.render("404");
   });
 };
+

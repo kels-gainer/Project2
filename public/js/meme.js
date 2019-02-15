@@ -1,12 +1,15 @@
 $(document).ready(function() {
   //Favorite Button
-  $(document).on("click", ".meme-favorite", function() {
+  $(document).on("click", ".button-like", function() {
     //Capture API values from the clicked button
     var displayName = $(this).attr("displayname");
     var instanceImageUrl = $(this).attr("instanceimageurl");
     var imageUrl = $(this).attr("imageurl");
     var text0 = $(this).attr("text0");
     var text1 = $(this).attr("text1");
+    //Need to update the button to prevend multiple posts...
+    $(this).removeClass("button-like");
+    $(this).addClass("button-unlike");
     //placeholder for user uID
     var UID = "";
     firebase.auth().onAuthStateChanged(function(user) {
@@ -30,6 +33,19 @@ $(document).ready(function() {
       saveToDb(obj, UID);
     });
   });
+
+  $(document).on("click", ".button-unlike", function() {
+    var id = $(this).attr("id");
+    console.log(id);
+    //update button after press
+    $(this).removeClass("button-unlike");
+    $(this).addClass("button-like");
+    // firebase.auth().onAuthStateChanged(function(user) {
+    //   UID = user.uid;
+    // });
+    deleteFromDb(id);
+  });
+
   //Popular Button
   // console.log("Loaded");
   $(document).on("click", "#btnPop", function() {
@@ -124,7 +140,21 @@ function updateDb(post) {
     url: "/api/posts",
     data: post
   }).then(function() {
-    alert("Success");
+    //alert("Success id: ");
+    //now add id to the button
+  });
+}
+
+function deleteFromDb(id) {
+  var queryURL = "/api/delete/" + id;
+  console.log(queryURL);
+  $.ajax({
+    method: "DELETE",
+    url: queryURL
+  }).then(function() {
+    //alert("Your meme has been destroyed");
+    //now reload
+    location.reload();
   });
 }
 
@@ -133,21 +163,22 @@ function displayMemes(results) {
   //Looping over the data to grab displayName and instanceImageUrl
   $.each(results, function(index, item) {
     // console.log(index, item.displayName, item.instanceImageUrl);
-    if (index <= 13) {
+    if (index <= 11) {
       var memeUrl = item.instanceImageUrl;
       var memeName = item.displayName;
-      var memeDiv = $("<div>").addClass("col-md");
+      var memeDiv = $("<div>").addClass("col-sm memeItem");
       // var p = $("<p>").text(memeName);
       var memeImage = $("<img class='meme'>");
       memeImage.attr("src", memeUrl).attr("title", memeName);
       var favButton = $("<button>").attr({
-        class: "meme-favorite",
+        class: "button button-like meme-button",
         displayName: memeName,
         instanceImageUrl: memeUrl,
         imageUrl: item.imageUrl,
         text0: item.text0,
         text1: item.text1
       });
+      favButton.html("<i class='fa fa-heart'></i><span> Favorite</span>");
       var itemDiv = $("<div>").html(memeImage);
       itemDiv.append(favButton);
       // memeDiv.append(p);
