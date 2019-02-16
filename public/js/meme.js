@@ -181,7 +181,7 @@ function displayMemes(results) {
       favButton.html("<i class='fa fa-heart'></i><span> Favorite</span>");
       var itemDiv = $("<div>").html(memeImage);
       itemDiv.append(favButton);
-      // memeDiv.append(p);
+      // Now build the modal....
       memeDiv.append(itemDiv);
       $(".memes-view").prepend(memeDiv);
     }
