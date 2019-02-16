@@ -141,7 +141,7 @@ function updateDb(post) {
     data: post
   }).then(function() {
     //alert("Success id: ");
-    //now add id to the button
+    //now add id to the button...
   });
 }
 
@@ -181,9 +181,30 @@ function displayMemes(results) {
       favButton.html("<i class='fa fa-heart'></i><span> Favorite</span>");
       var itemDiv = $("<div>").html(memeImage);
       itemDiv.append(favButton);
-      // memeDiv.append(p);
+      // Now build the modal....
       memeDiv.append(itemDiv);
       $(".memes-view").prepend(memeDiv);
     }
   });
 }
+
+//Search Form code from Kenneth
+$("form").submit(function(event) {
+  event.preventDefault();
+  var search = $("#search")
+    .val()
+    .replace(/\s/g, "-")
+    .toLowerCase();
+  console.log(search);
+  $.ajax({
+    url: "/api/searchButton/" + search,
+    type: "POST"
+  }).then(function(response) {
+    //console.log(response);
+    // storing the data from the AJAX request in the results variable
+    var results = response;
+    displayMemes(results);
+    //Now empty search field
+    $("#search").val("");
+  });
+});

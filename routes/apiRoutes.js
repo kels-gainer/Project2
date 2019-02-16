@@ -48,6 +48,29 @@ module.exports = function(app) {
   //   });
   // });
 
+  app.post("/api/searchButton/:search", function(req, res) {
+    var search = req.params.search;
+    console.log(search);
+    var n = Math.floor(Math.random() * 20) + 1;
+    var queryURL =
+      "http://version1.api.memegenerator.net//Instances_Search?q=" +
+      search +
+      "&pageIndex=" +
+      n +
+      "&pageSize=12&apiKey=" +
+      MemeKey.apiKey;
+    axios
+      .get(queryURL)
+      .then(function(response) {
+        //console.log(response);
+        //console.log(response.data.result);
+        res.send(response.data.result);
+      })
+      .catch(function(err) {
+        console.log(err);
+      });
+  });
+
   // POST route for saving a new post
   app.post("/api/posts", function(req, res) {
     console.log(req.body);

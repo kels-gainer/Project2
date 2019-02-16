@@ -6,9 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.0.0/lumen/bootstrap.min.css" />
     <link rel="stylesheet" href="../public/styles/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<script src="https://code.jquery.com/jquery.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+      integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+      crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+      integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+      crossorigin="anonymous"></script>
     
     <title>Document</title>
 </head>
@@ -38,41 +45,65 @@
     <!-- nav bar end -->
 
     <!-- grid -->
+<div class="container">
     <div class="row">
         <div class="column image">
                 <button class="button button-like">
                         <i class="fa fa-heart"></i>
                         <span>Like</span>
                       </button> 
-            <img src="../public/images/one-does-not-simply-create-an-original-app.jpg" style="width:100%, max-width:300px">
-            <img src="../public/images/test1.jpg" style="width:100%">
+            <a href ="#" data-toggle="modal" data-target="#memeModal1"><img src="../public/images/test5.jpg" style="width: 150px"></a>
+
+<!-- MODAL -->
+<div class="modal fade" id="memeModal1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered">
+  
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">
+              <span id="memeTitle">Title</span>
+          </h4>
+        </div>
+        <div class="modal-body">
+                <img src="../public/images/test5.jpg" style="width: 100%">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+  
+    </div>
+  </div>
+
+            <img src="../public/images/test1.jpg" style="width: 150px">
                 <div class="myModal modal-img"></div>
                 <span class="close">&times;</span>
                 <img class="modal-content" id="test1">
                 <div id="caption"></div>                
-            <img src="../public/images/test2.jpg" style="width:100%">
-            <img src="../public/images/test3.jpg" style="width:100%">
+            <img src="../public/images/test2.png" style="width: 150px">
+            <img src="../public/images/test3.jpg" style="width: 150px">
         </div>
         <div class="column">
-            <img src="../public/images/test4.jpg" style="width:100%">
-            <img src="../public/images/test5.jpg" style="width:100%">
-            <img src="../public/images/test6.jpg" style="width:100%">
-            <img src="../public/images/test7.jpg" style="width:100%">
+            <img src="../public/images/test4.jpg" style="width: 150px">
+            <img src="../public/images/test5.jpg" style="width: 150px">
+            <img src="../public/images/test6.jpg" style="width: 150px">
+            <img src="../public/images/test7.png" style="width: 150px">
         </div>
         <div class="column">
-            <img src="../public/images/one-does-not-simply-create-an-original-app.jpg" style="width:100%">
-            <img src="../public/images/test1.jpg" style="width:100%">
-            <img src="../public/images/test2.jpg" style="width:100%">
-            <img src="../public/images/test3.jpg" style="width:100%">
+            <img src="../public/images/test5.jpg" style="width: 150px">
+            <img src="../public/images/test1.jpg" style="width: 150px">
+            <img src="../public/images/test2.png" style="width: 150px">
+            <img src="../public/images/test3.jpg" style="width: 150px">
         </div>
         <div class="column">
-            <img src="../public/images/test4.jpg" style="width:100%">
-            <img src="../public/images/test5.jpg" style="width:100%">
-            <img src="../public/images/test6.jpg" style="width:100%">
-            <img src="../public/images/test7.jpg" style="width:100%">
+            <img src="../public/images/test4.jpg" style="width: 150px">
+            <img src="../public/images/test5.jpg" style="width: 150px">
+            <img src="../public/images/test6.jpg" style="width: 150px">
+            <img src="../public/images/test7.png" style="width: 150px">
         </div>
     </div>
-        
+</div>
     
     
     
