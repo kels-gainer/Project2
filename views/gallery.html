@@ -35,23 +35,45 @@
             </ul>
         </nav>
     </div>
-    <!-- nav bar end -->
-
+    <!-- nav bar end --> 
     <!-- grid -->
     <div class="row">
-        <div class="column image">
-                <button class="button button-like">
-                        <i class="fa fa-heart"></i>
-                        <span>Like</span>
-                      </button> 
-            <img src="../public/images/one-does-not-simply-create-an-original-app.jpg" style="width:100%, max-width:300px">
+        <div class="column">
+            <img src="../public/images/one-does-not-simply-create-an-original-app.jpg">
             <img src="../public/images/test1.jpg" style="width:100%">
-                <div class="myModal modal-img"></div>
-                <span class="close">&times;</span>
-                <img class="modal-content" id="test1">
-                <div id="caption"></div>                
-            <img src="../public/images/test2.jpg" style="width:100%">
-            <img src="../public/images/test3.jpg" style="width:100%">
+            <div>
+                <button class="button button-like">
+                    <i class="fa fa-heart"></i>
+                    <span>Like</span>
+                  </button>
+                  <img id="myImg" src="../public/images/test2.jpg" alt="test" style="width: 100%" data-toggle="modal" data-target="#exampleModal">
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <!-- <h5 class="modal-title" id="exampleModalLabel"></h5> -->
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        </div>
+                        <div class="modal-body">
+                            <img src="../public/images/test2.jpg">
+                        </div>
+                        <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img src="../public/images/test3.jpg" style="width:100%">
+                <button class="button button-like">
+                    <i class="fa fa-heart"></i>
+                    <span>Like</span>
+                  </button>
+            </div>
         </div>
         <div class="column">
             <img src="../public/images/test4.jpg" style="width:100%">
