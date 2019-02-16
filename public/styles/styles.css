@@ -1,11 +1,11 @@
 html{
     height: 100%;
   }
-  body{
+  html, body {
     font-family: sans-serif;
     width: 100wh;
     /* height: 90vh; */
-    color: #fff;
+    background-color: rgb(35, 41, 213);
 
     /*gradient start */
     background: linear-gradient(-45deg, rgb(220, 17, 17), rgb(84, 0, 157), rgb(35, 41, 213), rgb(0, 0, 0));
