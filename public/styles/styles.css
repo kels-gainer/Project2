@@ -4,7 +4,7 @@ html{
   body{
     font-family: sans-serif;
     width: 100wh;
-    height: 90vh;
+    /* height: 90vh; */
     color: #fff;
 
     /*gradient start */
@@ -236,24 +236,39 @@ html{
   .catergory-btn {
     margin: 25px;
   }
-<<<<<<< HEAD
   /* Kenneth's stuff. This was created for the Meme rendering */
-=======
-
-
->>>>>>> 075e980838dfa221c343b0a678b66d620fd601d1
   .memes-view {
     position: relative;
-    top: 42.5%;
-    
+    top: 42.5%; 
   }
+  
   .meme {
     width: 150px;
     height: 150px;
     padding: 5px;
-    float: left;    
+    float: left;
+    z-index: 1;  
   }
-<<<<<<< HEAD
   /* End Kenneth's stuff */
-=======
->>>>>>> 075e980838dfa221c343b0a678b66d620fd601d1
+
+  .memeItem {
+    margin-bottom: 2rem;
+    float: left;
+  }
+
+  .meme-button {
+    position: absolute;
+    left: 20px;
+    top: 150px;
+  }
+
+  .below-content {
+    position: relative;
+    top: 42.5%; 
+  }
+
+  .button-unlike {
+    background-color: blue;
+    color: white;
+  }
+

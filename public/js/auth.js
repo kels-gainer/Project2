@@ -187,6 +187,12 @@ function initApp() {
       document.getElementById("quickstart-sign-in-status").textContent =
         "Signed In";
       document.getElementById("quickstart-sign-in").textContent = "Sign out";
+      $("#menu-6").text("Sign Out");
+      //Now remove the modal trigger
+      $("#menu-6")
+        .addClass("menu-sign-out")
+        .removeAttr("data-toggle")
+        .removeAttr("data-target");
       //This displays the whole user object as a JSON object, nice for testing but bad for
       //document.getElementById("quickstart-account-details").textContent = JSON.stringify(user, null, "  ");
       if (!emailVerified) {
@@ -210,6 +216,8 @@ function initApp() {
       document.getElementById("quickstart-sign-in-status").textContent =
         "Signed Out";
       document.getElementById("quickstart-sign-in").textContent = "Sign in";
+      $("#menu-6").text("Sign In");
+      $("#menu-6").removeClass("menu-sign-out");
       //added steps to INCLUDE sign-up and pw-reset buttons
       $("#quickstart-sign-up").attr({
         disabled: false
@@ -239,8 +247,15 @@ function initApp() {
   document
     .getElementById("quickstart-password-reset")
     .addEventListener("click", sendPasswordReset, false);
+  //Added event listner for menu sign out button
+  //Needs to be here otherwise it won't trigger correctly on page load
+  $(".menu-sign-out").click(function() {
+    alert("sign out?");
+    toggleSignIn();
+  });
 }
 
+// FUNCTIONS ADDED BY JCMH
 function setWelcomeText(userStatus) {
   var welcomeHTML = "";
   if (userStatus === "signedin") {
