@@ -14,7 +14,6 @@ html{
     -moz-animation: Gradient 15s ease infinite;
     animation: Gradient 15s ease infinite;
     height: 100%;
-    margin: 0;
   }
 
   @-webkit-keyframes Gradient {
@@ -56,10 +55,8 @@ html{
   
   .wrapper{
     overflow: hidden;
-    position: absolute;
+    position: relative;
     height: 100%;
-    z-index: 999;
-    width: 100%;
   }
   
   /* navbar start */
@@ -199,7 +196,7 @@ html{
   }
   
   .wrap{
-    width: 75%;
+    width: 30%;
     position: absolute;
     top: 35%;
     left: 50%;
@@ -214,7 +211,7 @@ html{
     display: flex;
     justify-content: center;
     width: 30%;
-    position: relative;
+    position: absolute;
     top: 45%;
     left: 50%;
     border:black;
@@ -240,154 +237,3 @@ html{
   .catergory-btn {
     margin: 25px;
   }
-
-/* gird start */
-* {
-  box-sizing: border-box;
-}
-
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0 4px;
-  padding-top: 50px;
-}
-
-.column {
-  flex: 25%;
-  max-width: 25%;
-  padding: 0 4px;
-}
-
-.column img {
-  margin-top: 8px;
-  vertical-align: middle;
-}
-
-@media screen and (max-width: 800px) {
-  .column {
-    flex: 50%;
-    max-width: 50%;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .column {
-    flex: 100%;
-    max-width: 100%;
-  }
-}
-/* grid end */
-
-
-/* hover button heart */
-
-.button-like {
-  border: 2px solid #8a8a8a;
-  background-color: #f8f8f8;
-  text-decoration: none;
-  padding: 10px;
-  vertical-align: middle;
-  text-align: center;
-  border-radius: 3rem;
-  color: #8a8a8a;
-  transition: all ease 0.4s;
-  float: right;
-  margin: 15px;
-  cursor: pointer;
-  position: relative;
-  
-}
-
-.button-like span {
-  margin-left: 0.5rem;
-}
-
-.button-like .fa,
-.button-like span {
-  transition: all ease 0.4s;
-}
-
-.button-like:focus {
-  outline: 0;
-}
-
-.button-like:focus .fa,
-.button-like:focus span {
-  color: #8a8a8a;
-}
-
-.button-like:hover {
-  border-color: #cc4b37;
-}
-
-.button-like:hover .fa,
-.button-like:hover span {
-  color: #cc4b37;
-}
-
-.liked {
-  background-color: #cc4b37;
-  border-color: #cc4b37;
-}
-
-.liked .fa,
-.liked span {
-  color: #fefefe;
-}
-
-.liked:focus {
-  background-color: #cc4b37;
-}
-
-.liked:focus .fa,
-.liked:focus span {
-  color: #fefefe;
-}
-
-.liked:hover {
-  background-color: #cc4b37;
-  border-color: #cc4b37;
-}
-
-.liked:hover .fa,
-.liked:hover span {
-  color: #fefefe;
-}
-
-/* modal for img */
-
-#myImg {
-  border-radius: 5px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-#myImg:hover {
-  opacity: 0.7;
-}
-
-<<<<<<< HEAD
-.modal-body {
-  margin: 0 auto;
-}
-=======
-@media only screen and (max-width: 700px) {
-  .modal-content {
-    width: 100%;
-  }
-}
-
-  /* Kenneth's stuff. This was created for the Meme rendering */
-  .memes-view {
-    position: relative;
-    top: 42.5%;
-    
-  }
-  .meme {
-    width: 150px;
-    height: 150px;
-    padding: 5px;
-    float: left;    
-  }
->>>>>>> 4d705b56590d7d4a83c459d2c3d3f59c4cc8d790
