@@ -11,12 +11,10 @@
     </svg>
     <a href="/" class="logo">MyMeme</a>
   </header>
-    <div class= "container below-content">
+    {{!-- <div class= "container below-content">
       <div class="row memes-view">
-        {{!-- Meme results go here... --}}
-
       </div>
-    </div>
+    </div> --}}
   <nav>
     <ul>
       <li><a href="/">Home</a></li>
@@ -74,23 +72,30 @@
 
 <!-- MAIN CONTENT -->
 <div class="container">
-  <div class="row">
-    <div class="col-sm wrap">
-      <form class="search">
-        <input type="text" id= "search" class="searchTerm" placeholder="SEARCH A MEME">
-        <button type="submit" class="searchButton">
-          <i class="fa fa-search search-icon"></i>
-        </button>
-      </form>
+  <div class="column">
+    <div class="row">
+      <div class="col"></div>
+      <div class="col-6 wrap">
+        <form class="search">
+          <input type="text" id= "search" class="searchTerm" placeholder="SEARCH A MEME">
+          <button type="submit" class="searchButton">
+            <i class="fa fa-search search-icon"></i>
+          </button>
+        </form>
+      </div>
+      <div class="col"></div>
+    </div>
+    <div class="row">
+      <div class="col"></div>
+      <div class="col-4 btn-wrap">
+        <button type="button" id="btnPop" class="btn btn-secondary btn-lg catergory-btn">Search By POPULAR</button>
+      </div>
+      <div class="col"></div>
+    </div>
+    <div class="row memes-view">
+      {{!-- API results go here --}}
     </div>
   </div>
-    </div class="row">
-  <div class="col-sm btn-wrap">
-    <button type="button" id="btnPop" class="btn btn-secondary btn-lg catergory-btn">Search By POPULAR</button>
-  </div>
-    
-  </div>
-
 </div>
 
 </div>
