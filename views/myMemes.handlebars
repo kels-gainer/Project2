@@ -22,7 +22,31 @@
                 <i class="fa fa-heart"></i><span> Favorite</span>
                 {{!-- <span>Like</span> --}}
               </button> 
-              <img class="meme" src="{{instanceImageUrl}}" title="{{displayName}}">
+              <a href ="#" data-toggle="modal" data-target="#memeModal{{id}}"><img class="meme" src="{{instanceImageUrl}}" title="{{displayName}}"></a>
+
+              <!-- MODAL -->
+              <div class="modal fade" id="memeModal{{id}}" role="dialog">
+                  <div class="modal-dialog modal-dialog-centered">
+          
+                  <!-- Modal content-->
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h4 class="modal-title">
+                          <span id="memeTitle">{{displayName}}</span>
+                      </h4>
+                    </div>
+                    <div class="modal-body">
+                            <img src="{{instanceImageUrl}}" style="width: 100%">
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+          
+                </div>
+              </div>
+              <!-- END MODAL -->
+            
             </div>
         {{/each}}
       </div>

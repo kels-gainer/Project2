@@ -57,7 +57,11 @@ html{
   .wrapper{
     /* overflow: hidden; */
     position: relative;
-    height: 250px;
+    /* height: 250px; */
+  }
+
+  .container {
+    margin-top: 8rem;
   }
   
   header{
@@ -268,13 +272,13 @@ html{
     color: #8a8a8a;
   }
 
-  .button-unlike {
+  .button-unlike, .button-dud {
     border: 2px solid #cc4b37;
     background-color: #f8f8f8;
     color: #cc4b37;
   }
 
-  .button-like, .button-unlike {
+  .button-like, .button-unlike, .button-dud {
     text-decoration: none;
     vertical-align: middle;
     text-align: center;
