@@ -221,6 +221,8 @@ html{
   #btnPop {
     background-color: black;
     color: white;
+    width: 180px;
+    margin: 0;
   }
 
   #btnRec {
@@ -267,8 +269,69 @@ html{
     top: 42.5%; 
   }
 
-  .button-unlike {
-    background-color: blue;
-    color: white;
+  .button-like {
+    border: 2px solid #8a8a8a;
+    background-color: #f8f8f8;
+    color: #8a8a8a;
   }
 
+  .button-unlike {
+    border: 2px solid #cc4b37;
+    background-color: #f8f8f8;
+    color: #cc4b37;
+  }
+
+  .button-like, .button-unlike {
+    text-decoration: none;
+    vertical-align: middle;
+    text-align: center;
+    display: inline-block;
+    border-radius: 3rem;
+    transition: all ease 0.4s;
+    cursor: pointer;
+    position: absolute;
+  }
+  .button-like span {
+    margin-left: 0.5rem;
+  }
+  .button-like .fa,
+  .button-like span {
+    transition: all ease 0.4s;
+  }
+  .button-like:focus {
+    outline: 0;
+  }
+  .button-like:focus .fa,
+  .button-like:focus span {
+    color: #8a8a8a;
+  }
+  .button-like:hover {
+    border-color: #cc4b37;
+  }
+  .button-like:hover .fa,
+  .button-like:hover span {
+    color: #cc4b37;
+  }
+  .liked {
+    background-color: #cc4b37;
+    border-color: #cc4b37;
+  }
+  .liked .fa,
+  .liked span {
+    color: #fefefe;
+  }
+  .liked:focus {
+    background-color: #cc4b37;
+  }
+  .liked:focus .fa,
+  .liked:focus span {
+    color: #fefefe;
+  }
+  .liked:hover {
+    background-color: #cc4b37;
+    border-color: #cc4b37;
+  }
+  .liked:hover .fa,
+  .liked:hover span {
+    color: #fefefe;
+  }

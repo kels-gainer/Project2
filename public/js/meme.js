@@ -187,3 +187,67 @@ function displayMemes(results) {
     }
   });
 }
+
+//Search Form code from Kenneth
+$("form").submit(function(event) {
+  event.preventDefault();
+  var search = $("#search")
+    .val()
+    .replace(/\s/g, "-")
+    .toLowerCase();
+  console.log(search);
+  $.ajax({
+    url: "/api/searchButton/" + search,
+    type: "POST"
+  }).then(function(response) {
+    console.log(response);
+    // storing the data from the AJAX request in the results variable
+    var results = response;
+    $(".memes-view").empty();
+    //Looping over the data to grab displayName and instanceImageUrl
+    $.each(results, function(index, item) {
+      if (index <= 13) {
+        var memeUrl = item.instanceImageUrl;
+        var memeName = item.displayName;
+        var memeDiv = $("<div>").addClass("col-md");
+        var memeImage = $("<img class='meme'>");
+        memeImage.attr("src", memeUrl).attr("title", memeName);
+        memeDiv.append(memeImage);
+        $(".memes-view").prepend(memeDiv);
+      }
+    });
+  });
+});
+
+// $("form").on("submit", e => {
+//   e.preventDefault();
+//   const search = $("#search")
+//     .val()
+//     .replace(/\s/g, "-")
+//     .toLowerCase();
+//   console.log(search);
+//   $.ajax({
+//     url: "/api/searchButton",
+//     type: "POST",
+//     data: {
+//       search
+//     }
+//   }).then(function(response) {
+//     console.log(response);
+//     // storing the data from the AJAX request in the results variable
+//     var results = response;
+//     $(".memes-view").empty();
+//     //Looping over the data to grab displayName and instanceImageUrl
+//     $.each(results, function(index, item) {
+//       if (index <= 13) {
+//         var memeUrl = item.instanceImageUrl;
+//         var memeName = item.displayName;
+//         var memeDiv = $("<div>").addClass("col-md");
+//         var memeImage = $("<img class='meme'>");
+//         memeImage.attr("src", memeUrl).attr("title", memeName);
+//         memeDiv.append(memeImage);
+//         $(".memes-view").prepend(memeDiv);
+//       }
+//     });
+//   });
+// });
