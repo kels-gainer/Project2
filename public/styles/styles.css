@@ -61,7 +61,7 @@ html{
   }
 
   .container {
-    margin-top: 8rem;
+    margin-top: 3rem;
   }
   
   header{
@@ -333,4 +333,33 @@ html{
   .liked:hover .fa,
   .liked:hover span {
     color: #fefefe;
+  }
+
+  .logo-row {
+    display: block;
+    /* position: sticky; */
+    top: 60px;
+  }
+  .our-logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 450px;
+  }
+  .header-logo {
+    height: 40px;
+  }
+
+  /* For the Footer and credits */
+  footer {
+    margin-top: 2rem;
+    line-height: .5rem;
+    color: #8e9192;
+    text-align: center;
+  }
+  a.footer-link, a:visited {
+    color: #8e9192;
+  }
+  a.footer-link:hover, a:visited:hover {
+    color: white;
   }

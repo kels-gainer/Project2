@@ -164,6 +164,7 @@ function displayMemes(results) {
   $.each(results, function(index, item) {
     // console.log(index, item.displayName, item.instanceImageUrl);
     if (index <= 11) {
+      var generatorID = item.generatorID;
       var memeUrl = item.instanceImageUrl;
       var memeName = item.displayName;
       var memeDiv = $("<div>").addClass("col-sm memeItem");
