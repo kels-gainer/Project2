@@ -55,7 +55,7 @@ $(document).ready(function() {
     })
       // After data comes back from the request
       .then(function(response) {
-        console.log(response);
+        //console.log(response);
         // storing the data from the AJAX request in the results variable
         var results = response;
         //updated to a function for re-usability
@@ -164,6 +164,7 @@ function displayMemes(results) {
   $.each(results, function(index, item) {
     // console.log(index, item.displayName, item.instanceImageUrl);
     if (index <= 11) {
+      var generatorID = item.generatorID;
       var memeUrl = item.instanceImageUrl;
       var memeName = item.displayName;
       var memeDiv = $("<div>").addClass("col-sm memeItem");
