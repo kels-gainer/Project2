@@ -55,7 +55,7 @@ $(document).ready(function() {
     })
       // After data comes back from the request
       .then(function(response) {
-        console.log(response);
+        //console.log(response);
         // storing the data from the AJAX request in the results variable
         var results = response;
         //updated to a function for re-usability
