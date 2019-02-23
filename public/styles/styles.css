@@ -377,14 +377,13 @@ html{
     }
     .meme-button {
       top: 300px;
-      height: 30px;
+      height: 40px;
     }
-    .meme-item {
-      display: block;
-      width: 90%;
-      margin: auto;
+    .memeItem {
+      margin-bottom: 3rem;
+      /* margin-left: 4rem; */
     }
     .container {
-      margin-bottom: 60px;
+      margin-bottom: 8rem;
     }
   }
