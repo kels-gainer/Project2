@@ -344,7 +344,7 @@ html{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 450px;
+    width: 400px;
   }
   .header-logo {
     height: 40px;
@@ -356,6 +356,10 @@ html{
     line-height: .5rem;
     color: #8e9192;
     text-align: center;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
   }
   a.footer-link, a:visited {
     color: #8e9192;
