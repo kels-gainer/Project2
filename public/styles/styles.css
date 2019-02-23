@@ -383,4 +383,7 @@ html{
       width: 90%;
       margin: auto;
     }
+    .container {
+      margin-bottom: 6rem;
+    }
   }
