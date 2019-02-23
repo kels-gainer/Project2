@@ -1,5 +1,5 @@
 # myMeme (AKA Meme Wars)
-![Project2](public/images/one-does-not-simply-create-an-original-app.jpg)
+![Project2](public/images/test6.jpg)
 ## A personal meme repository and fun messaging tool.
 
 - - -
