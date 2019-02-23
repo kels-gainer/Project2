@@ -62,6 +62,7 @@ html{
 
   .container {
     margin-top: 3rem;
+    margin-bottom: 4rem;
   }
   
   header{
@@ -244,8 +245,8 @@ html{
   }
   
   .meme {
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     padding: 5px;
     float: left;
     z-index: 1;  
@@ -254,13 +255,12 @@ html{
 
   .memeItem {
     margin-bottom: 2rem;
-    float: left;
   }
 
   .meme-button {
     position: absolute;
     left: 20px;
-    top: 150px;
+    top: 200px;
   }
 
   .below-content {
@@ -353,17 +353,34 @@ html{
   /* For the Footer and credits */
   footer {
     margin-top: 2rem;
+    padding-top: 1rem;
     line-height: .5rem;
     color: #8e9192;
     text-align: center;
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    background-color: black;
   }
   a.footer-link, a:visited {
     color: #8e9192;
   }
   a.footer-link:hover, a:visited:hover {
     color: white;
+  }
+
+  /* if screen or window size is 520px or less */
+  @media screen and (max-width: 520px) {
+    .logo-row {
+      display: none;
+    }
+    .meme {
+      width: 300px;
+      height: 300px;
+    }
+    .meme-button {
+      top: 300px;
+    }
+    .meme-item {
+      display: block;
+      width: 90%;
+      margin: auto;
+    }
   }
