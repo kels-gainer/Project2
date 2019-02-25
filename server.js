@@ -7,16 +7,16 @@ var db = require("./models");
 var app = express();
 var PORT = process.env.PORT || 3000;
 
-if (process.env.JAWSDB_URL) {
-  connection = mysql.createConnection(process.env.JAWSDB_URL);
-} else {
-  conneciton = mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    password: "root",
-    database: "myMeme"
-  });
-}
+// if (process.env.JAWSDB_URL) {
+//   connection = mysql.createConnection(process.env.JAWSDB_URL);
+// } else {
+//   conneciton = mysql.createConnection({
+//     host: "localhost",
+//     user: "root",
+//     password: "root",
+//     database: "myMeme"
+//   });
+// }
 
 // Middleware
 app.use(express.urlencoded({ extended: false }));
